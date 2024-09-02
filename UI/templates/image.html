@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+	<title>화풍 변환 완료</title>
+</head>
+<body>
+	<div class="container">
+        <h2 style="text-align: center;">화풍 변환 완료!</h2>
+		<div class="card text-center">
+            <div class="card-body">
+                {% for image in images %}
+					<img src="{{ url_for('static', filename='gen_images/' + image) }}" class="center">
+				{% endfor %}
+            </div>
+        </div>
+	</div>
+</body>
+</html>
